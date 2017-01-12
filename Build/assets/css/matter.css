@@ -204,61 +204,41 @@ html {
 *::after {
   box-sizing: inherit; }
 
-@-ms-viewport {
-  width: device-width; }
 html {
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1rem;
+  font-family: 'Roboto' sans-serif;
+  font-size: 16px;
   font-weight: normal;
-  line-height: 1.5;
   color: #292b2c;
-  background-color: #fff; }
+  background-color: #ffffff; }
 
 [tabindex="-1"]:focus {
   outline: none !important; }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: .5rem; }
-
-p {
-  margin-top: 0;
-  margin-bottom: 1rem; }
-
-abbr[title],
-abbr[data-original-title] {
-  cursor: help; }
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0; }
 
 address {
-  margin-bottom: 1rem;
+  margin: 0;
   font-style: normal;
   line-height: inherit; }
 
 ol,
 ul,
 dl {
-  margin-top: 0;
-  margin-bottom: 1rem; }
+  margin: 0; }
 
 ol ol,
 ul ul,
 ol ul,
 ul ol {
-  margin-bottom: 0; }
-
-dt {
-  font-weight: bold; }
-
-dd {
-  margin-bottom: .5rem;
-  margin-left: 0; }
+  margin: 0; }
 
 blockquote {
-  margin: 0 0 1rem; }
+  margin: 0; }
 
 a {
   color: #0275d8;
@@ -271,51 +251,17 @@ a:not([href]):not([tabindex]) {
     outline: 0; }
 
 pre {
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin: 0;
   overflow: auto; }
 
 figure {
-  margin: 0 0 1rem; }
+  margin: 0; }
 
 img {
   vertical-align: middle; }
 
-[role="button"] {
-  cursor: pointer; }
-
-a,
-area,
-button,
-[role="button"],
-input,
-label,
-select,
-summary,
-textarea {
-  touch-action: manipulation; }
-
-table {
-  border-collapse: collapse;
-  background-color: transparent; }
-
-caption {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  color: #636c72;
-  text-align: left;
-  caption-side: bottom; }
-
-th {
-  text-align: left; }
-
 label {
-  display: inline-block;
-  margin-bottom: .5rem; }
-
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color; }
+  display: inline-block; }
 
 input,
 button,
@@ -349,15 +295,6 @@ legend {
   margin-bottom: .5rem;
   font-size: 1.5rem;
   line-height: inherit; }
-
-input[type="search"] {
-  -webkit-appearance: none; }
-
-output {
-  display: inline-block; }
-
-[hidden] {
-  display: none !important; }
 
 .align-baseline {
   vertical-align: baseline !important; }
