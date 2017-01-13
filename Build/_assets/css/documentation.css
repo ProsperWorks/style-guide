@@ -1,61 +1,55 @@
-.doc-nav-primary, .doc-nav-secondary {
-  width: 250px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin-top: 60px;
-  height: calc(100vh - 60px);
+.doc-body {
+  display: flex; }
+
+.doc-nav {
+  width: 25%;
+  height: 100vh;
+  max-width: 16rem;
+  min-width: 12rem;
   border-right: 1px solid #DFDFDF;
-  overflow: scroll;
-  z-index: 1; }
-  .doc-nav-primary .doc-section-title, .doc-nav-secondary .doc-section-title {
-    width: 250px;
-    position: fixed;
-    top: 0; }
-  .doc-nav-primary ul, .doc-nav-secondary ul {
-    padding: 16px 0 0 0; }
-    .doc-nav-primary ul li, .doc-nav-secondary ul li {
+  overflow-x: scroll; }
+  .doc-nav ul {
+    padding: 4rem 0 0; }
+    .doc-nav ul li {
       list-style-type: none;
       margin: 0;
-      padding: 4px 24px;
-      font: 14px/20px 'Roboto', sans-serif; }
-      .doc-nav-primary ul li a, .doc-nav-secondary ul li a {
+      padding: .25rem .875rem .25rem 1.5rem;
+      font: .875rem/1.25rem 'Roboto', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .doc-nav ul li i {
+        visibility: hidden; }
+      .doc-nav ul li a {
         color: #9D9D9D; }
-    .doc-nav-primary ul li.current, .doc-nav-secondary ul li.current {
+      .doc-nav ul li a:hover {
+        color: #666666; }
+    .doc-nav ul li.current, .doc-nav ul li.current-parent {
       background: #f5f6fb;
-      font-weight: 500; }
-      .doc-nav-primary ul li.current a, .doc-nav-secondary ul li.current a {
+      font-weight: 500;
+      color: #3A40C1; }
+      .doc-nav ul li.current i, .doc-nav ul li.current-parent i {
+        visibility: visible; }
+      .doc-nav ul li.current a, .doc-nav ul li.current-parent a {
         color: #3A40C1; }
-  .doc-nav-primary.inactive, .doc-nav-secondary.inactive {
+  .doc-nav .doc-page-title {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 1.5rem;
+    position: absolute;
+    height: 4rem;
+    font: 1.25rem/1.875rem 'Roboto Mono', monospace; }
+    .doc-nav .doc-page-title a {
+      color: #3A40C1; }
+  .doc-nav.inactive {
     display: none; }
 
-.doc-nav-secondary, .doc-nav-secondary .doc-section-title {
-  left: 250px; }
-
 .doc-content {
-  position: fixed;
-  margin: 60px 0 0 500px;
-  width: calc(100% - 500px);
-  height: calc(100vh - 60px);
-  padding-left: 500px;
-  padding: 5%;
-  overflow-x: scroll; }
-  .doc-content .doc-section-title {
-    margin-left: 500px;
-    width: 100%; }
+  height: 100vh;
+  width: 100%;
+  overflow: scroll;
+  padding: 4rem 5% 5% 5%; }
 
-.doc-section-title {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  padding: 0 0 0 24px;
-  border-bottom: 1px solid #dfdfdf;
-  border-right: 1px solid #dfdfdf;
-  font: 20px/30px 'Roboto Mono', monospace;
-  color: #9D9D9D;
-  background: #ffffff; }
-  .doc-section-title a {
-    color: #3A40C1; }
+.doc-h1 {
+  font: 300 3rem/4rem 'Roboto Mono', 'Monaco', monospace;
+  color: #3A40C1; }

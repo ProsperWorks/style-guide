@@ -1,5 +1,6 @@
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -210,7 +211,6 @@ html {
 
 body {
   font-family: 'Roboto' sans-serif;
-  font-size: 16px;
   font-weight: normal;
   color: #292b2c;
   background-color: #ffffff; }

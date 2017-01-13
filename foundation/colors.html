@@ -1,83 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- $foundation-nav      active -->
+<!-- $page-title          Colors -->
 
-    
-        <!-- Hammer reload -->
-          <script>
-            setInterval(function(){
-              try {
-                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
-                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
-                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-                window.onbeforeunload = function() { ws = null }
-                ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link');
-                    for (var i = 0; i < links.length;i++) {
-                    var link = links[i];
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
-                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
-                    }
-                  }
-                }
-              }catch(e){}
-            }, 1000)
-          </script>
-        <!-- /Hammer reload -->
-      
+<!-- @include header -->
 
-    <link rel='stylesheet' href='../_assets/css/matter.css'>
-<link rel='stylesheet' href='../_assets/css/documentation.css'>
 
-    <title>Matter</title>
-
-  </head>
-  <body class="doc-body">
-  <div class="doc-nav">
-  <div class="doc-page-title"><a href="../index.html">Matter</a></div>
-  <ul>
-    <li class='current-parent'><a class='current-parent' href="index.html">Foundation</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="../components/index.html">Components</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="">Patterns</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="">Layouts</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="">Examples</a><i class="material-icons">arrow_forward</i></li>
-  </ul>
-</div>
-
-<div class="doc-nav active">
-  <ul>
-    <li class='current'><a class='current' href="introduction.html">Introduction</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="design-principles.html">Design Principles</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="colors.html">Colors</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="typography.html">Typography</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="iconography.html">Iconography</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="elevation.html">Elevation</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="animation.html">Animation</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="writing-style.html">Writing Style</a><i class="material-icons">arrow_forward</i></li>
-  </ul>
-</div>
-
-<div class="doc-nav inactive">
-  <ul>
-    <li><a href="../components/buttons.html">Buttons</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="<!-- @path -->">Text Inputs</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="../index.html">Tooltips</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="../index.html">Alerts</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="../index.html">Menus</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="../index.html">Search</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="../index.html">Selectors</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="../index.html">Tabs</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="../index.html">Chips</a><i class="material-icons">arrow_forward</i></li>
-    <li><a href="../index.html">Action Bars</a><i class="material-icons">arrow_forward</i></li>
-  </ul>
-</div>
-
-  <div class="doc-content">
-    <div class="doc-h1">Introduction</div>
   <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.</p>
 
   <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.</p>
@@ -99,11 +25,5 @@
   <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.</p>
   <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.</p>
 
-<div>
 
-<!-- jQuery first, then Tether, then Bootstrap JS. -->
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-</body>
-</html>
+<!-- @include footer -->
