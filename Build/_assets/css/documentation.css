@@ -13,17 +13,17 @@
     .doc-nav ul li {
       list-style-type: none;
       margin: 0;
-      padding: .25rem .875rem .25rem 1.5rem;
-      font: .875rem/1.25rem 'Roboto', sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: space-between; }
+      font: .875rem/1.25rem 'Roboto', sans-serif; }
       .doc-nav ul li i {
         visibility: hidden; }
       .doc-nav ul li a {
-        color: #9D9D9D; }
-      .doc-nav ul li a:hover {
-        color: #666666; }
+        color: #9D9D9D;
+        padding: .25rem .875rem .25rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .doc-nav ul li a:hover {
+          color: #666666; }
     .doc-nav ul li.current, .doc-nav ul li.current-parent {
       background: #f5f6fb;
       font-weight: 500;

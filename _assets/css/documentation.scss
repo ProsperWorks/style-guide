@@ -16,23 +16,29 @@
     li {
       list-style-type: none;
       margin: 0;
-      padding: .25rem .875rem .25rem 1.5rem;
       font: .875rem/1.25rem 'Roboto', sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       i { visibility: hidden; }
-      a { color: #9D9D9D; }
-      a:hover { color: #666666; }
+      a {
+        color: #9D9D9D;
+        padding: .25rem .875rem .25rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:hover {
+          color: #666666;
+        }
+      }
+
     }
 
     li.current, li.current-parent {
       background: #f5f6fb;
       font-weight: 500;
       color: #3A40C1;
-
       i { visibility: visible; }
-      a { color: #3A40C1; }
+      a {
+        color: #3A40C1;
+      }
     }
 
   }
