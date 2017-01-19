@@ -1,0 +1,141 @@
+.button {
+  background-color: $color-button-default;
+  color: $color-text-default;
+  border-radius: $radius;
+  box-shadow: $elevation-1;
+  height: 2rem;
+  padding: 0 1rem;
+  font: 500 14px/20px 'Roboto', sans-serif; // note: add to foundation
+  text-transform: uppercase;
+  transition: background-color 300ms, color 300ms, box-shadow 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);;
+
+  &:hover,
+  &.doc-state-hover {
+    background: lighten($color-button-default, 5%);
+    box-shadow: $elevation-4;
+    transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);;
+  }
+
+  &:active,
+  &.doc-state-active {
+    box-shadow: $elevation-1;
+  }
+
+  &:focus,
+  &.doc-state-focus {
+    background: lighten($color-button-default, 10%);
+    box-shadow: $elevation-1;
+  }
+
+  &.disabled,
+  &.doc-state-disabled {
+    color: darken($color-button-default, 40%);
+    background: darken($color-button-default, 10%);
+    cursor: not-allowed;
+    box-shadow: $elevation-0;
+  }
+
+}
+
+.button.emphasis {
+  background-color: $color-button-emphasis;
+  color: $color-text-white;
+
+  &:hover,
+  &.doc-state-hover {
+    background: darken($color-button-emphasis, 5%);
+  }
+
+  &:active,
+  &.doc-state-active {
+  }
+
+  &:focus,
+  &.doc-state-focus {
+    background: darken($color-button-emphasis, 10%);
+  }
+
+  &.disabled,
+  &.doc-state-disabled {
+    color: lighten($color-button-emphasis, 40%);
+    background: lighten($color-button-emphasis, 20%);
+  }
+}
+
+.button.flat {
+  box-shadow: $elevation-0;
+
+  &:hover,
+  &.doc-state-hover {
+    background-color: $color-button-default;
+    box-shadow: $elevation-4;
+  }
+
+  &:active,
+  &.doc-state-active {
+    box-shadow: $elevation-1;
+  }
+
+  &:focus,
+  &.doc-state-focus {
+    box-shadow: $elevation-1;
+  }
+
+  &.disabled,
+  &.doc-state-disabled {
+    box-shadow: $elevation-0;
+  }
+}
+
+.button.secret {
+  box-shadow: $elevation-0;
+  background: transparent;
+  color: $color-text-default;
+
+  &:hover,
+  &.doc-state-hover {
+    box-shadow: $elevation-2;
+  }
+
+  &:active,
+  &.doc-state-active {
+    box-shadow: $elevation-1;
+  }
+
+  &:focus,
+  &.doc-state-focus {
+    box-shadow: $elevation-1;
+  }
+
+  &.disabled,
+  &.doc-state-disabled {
+    color: lighten($color-text-default, 20%);
+  }
+}
+
+.button.secret.emphasis {
+  box-shadow: $elevation-0;
+  background: transparent;
+  color: $color-blue;
+
+  &:hover,
+  &.doc-state-hover {
+    box-shadow: $elevation-2;
+  }
+
+  &:active,
+  &.doc-state-active {
+    box-shadow: $elevation-1;
+  }
+
+  &:focus,
+  &.doc-state-focus {
+    box-shadow: $elevation-1;
+  }
+
+  &.disabled,
+  &.doc-state-disabled {
+    color: lighten($color-blue, 20%);
+  }
+}

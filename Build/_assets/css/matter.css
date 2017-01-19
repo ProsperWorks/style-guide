@@ -212,7 +212,6 @@ html {
 body {
   font-family: 'Roboto' sans-serif;
   font-weight: normal;
-  color: #292b2c;
   background-color: #ffffff; }
 
 [tabindex="-1"]:focus {
@@ -241,7 +240,6 @@ blockquote {
   margin: 0; }
 
 a {
-  color: #0275d8;
   text-decoration: none; }
 
 a:not([href]):not([tabindex]) {
@@ -263,15 +261,16 @@ img {
 label {
   display: inline-block; }
 
+button {
+  outline: 0;
+  border: 0;
+  cursor: pointer; }
+
 input,
 button,
 select,
 textarea {
   line-height: inherit; }
-
-input[type="radio"]:disabled,
-input[type="checkbox"]:disabled {
-  cursor: not-allowed; }
 
 input[type="date"],
 input[type="time"],
@@ -295,5 +294,80 @@ legend {
   margin-bottom: .5rem;
   font-size: 1.5rem;
   line-height: inherit; }
+
+.button {
+  background-color: #EEEEEE;
+  color: #616161;
+  border-radius: 2px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25), 0px 0px 3px 0px rgba(0, 0, 0, 0.1);
+  height: 2rem;
+  padding: 0 1rem;
+  font: 500 14px/20px 'Roboto', sans-serif;
+  text-transform: uppercase;
+  transition: background-color 300ms, color 300ms, box-shadow 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  .button:hover, .button.doc-state-hover {
+    background: #fbfbfb;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25), 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  .button:active, .button.doc-state-active {
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25), 0px 0px 3px 0px rgba(0, 0, 0, 0.1); }
+  .button:focus, .button.doc-state-focus {
+    background: white;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25), 0px 0px 3px 0px rgba(0, 0, 0, 0.1); }
+  .button.disabled, .button.doc-state-disabled {
+    color: #888888;
+    background: #d5d5d5;
+    cursor: not-allowed;
+    box-shadow: none; }
+
+.button.emphasis {
+  background-color: #03A9F4;
+  color: #FAFAFA; }
+  .button.emphasis:hover, .button.emphasis.doc-state-hover {
+    background: #0398db; }
+  .button.emphasis:focus, .button.emphasis.doc-state-focus {
+    background: #0286c2; }
+  .button.emphasis.disabled, .button.emphasis.doc-state-disabled {
+    color: #c5ecfe;
+    background: #60ccfd; }
+
+.button.flat {
+  box-shadow: none; }
+  .button.flat:hover, .button.flat.doc-state-hover {
+    background-color: #EEEEEE;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25), 0px 0px 8px 0px rgba(0, 0, 0, 0.1); }
+  .button.flat:active, .button.flat.doc-state-active {
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25), 0px 0px 3px 0px rgba(0, 0, 0, 0.1); }
+  .button.flat:focus, .button.flat.doc-state-focus {
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25), 0px 0px 3px 0px rgba(0, 0, 0, 0.1); }
+  .button.flat.disabled, .button.flat.doc-state-disabled {
+    box-shadow: none; }
+
+.button.secret {
+  box-shadow: none;
+  background: transparent;
+  color: #616161; }
+  .button.secret:hover, .button.secret.doc-state-hover {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25), 0px 0px 4px 0px rgba(0, 0, 0, 0.1); }
+  .button.secret:active, .button.secret.doc-state-active {
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25), 0px 0px 3px 0px rgba(0, 0, 0, 0.1); }
+  .button.secret:focus, .button.secret.doc-state-focus {
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25), 0px 0px 3px 0px rgba(0, 0, 0, 0.1); }
+  .button.secret.disabled, .button.secret.doc-state-disabled {
+    color: #949494; }
+
+.button.secret.emphasis {
+  box-shadow: none;
+  background: transparent;
+  color: #2196F3; }
+  .button.secret.emphasis:hover, .button.secret.emphasis.doc-state-hover {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25), 0px 0px 4px 0px rgba(0, 0, 0, 0.1); }
+  .button.secret.emphasis:active, .button.secret.emphasis.doc-state-active {
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25), 0px 0px 3px 0px rgba(0, 0, 0, 0.1); }
+  .button.secret.emphasis:focus, .button.secret.emphasis.doc-state-focus {
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25), 0px 0px 3px 0px rgba(0, 0, 0, 0.1); }
+  .button.secret.emphasis.disabled, .button.secret.emphasis.doc-state-disabled {
+    color: #82c4f8; }
 
 /*# sourceMappingURL=matter.css.map */

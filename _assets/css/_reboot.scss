@@ -19,7 +19,7 @@ html {
 body {
   font-family: 'Roboto' sans-serif;
   font-weight: normal;
-  color: $body-color;
+  //color: $body-color;
   background-color: #ffffff;
 }
 
@@ -55,8 +55,8 @@ blockquote {
 }
 
 a {
-  color: $link-color;
-  text-decoration: $link-decoration;
+  //color: $link-color;
+  text-decoration: none;
 }
 
 a:not([href]):not([tabindex]) {
@@ -85,6 +85,12 @@ label {
   display: inline-block;
 }
 
+button {
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
 input,
 button,
 select,
@@ -95,7 +101,7 @@ textarea {
 input[type="radio"],
 input[type="checkbox"] {
   &:disabled {
-    cursor: $cursor-disabled;
+    //cursor: $cursor-disabled;
   }
 }
 
