@@ -1,6 +1,6 @@
-.button {
-  background-color: $color-button-default;
-  color: $color-text-default;
+@mixin button ($background-color: $color-button-default, $color: $color-text-default) {
+  background-color: $background-color;
+  color: $color;
   border-radius: $radius;
   box-shadow: $elevation-1;
   height: 2rem;
@@ -13,7 +13,7 @@
 
   &:hover,
   &.doc-state-hover {
-    background: lighten($color-button-default, 5%);
+    background: lighten($background-color, 5%);
     box-shadow: $elevation-4;
     transition-timing-function: $transition-timing-function-standard;
   }
@@ -25,27 +25,26 @@
 
   &:focus,
   &.doc-state-focus {
-    background: lighten($color-button-default, 10%);
+    background: lighten($background-color, 10%);
     box-shadow: $elevation-1;
   }
 
   &.disabled,
   &.doc-state-disabled {
-    color: darken($color-button-default, 40%);
-    background: darken($color-button-default, 10%);
+    color: darken($color, 40%);
+    background: darken($background-color, 10%);
     cursor: not-allowed;
     box-shadow: $elevation-0;
   }
-
 }
 
-.button.emphasis {
-  background-color: $color-button-emphasis;
-  color: $color-text-white;
+@mixin button-color($background-color: $color-button-emphasis, $color: $color-text-white) {
+  background-color: $background-color;
+  color: $color;
 
   &:hover,
   &.doc-state-hover {
-    background: darken($color-button-emphasis, 5%);
+    background: darken($background-color, 5%);
   }
 
   &:active,
@@ -54,22 +53,23 @@
 
   &:focus,
   &.doc-state-focus {
-    background: darken($color-button-emphasis, 10%);
+    background: darken($background-color, 10%);
   }
 
   &.disabled,
   &.doc-state-disabled {
-    color: lighten($color-button-emphasis, 40%);
-    background: lighten($color-button-emphasis, 20%);
+    color: lighten($color, 40%);
+    background: lighten($background-color, 20%);
   }
+
 }
 
-.button.flat {
+@mixin button-flat ($background-color: $color-button-default, $color: $color-text-default) {
   box-shadow: $elevation-0;
 
   &:hover,
   &.doc-state-hover {
-    background-color: $color-button-default;
+    background-color: $background-color;
     box-shadow: $elevation-4;
   }
 
@@ -89,10 +89,10 @@
   }
 }
 
-.button.secret {
+@mixin button-secret ($color: $color-text-default) {
   box-shadow: $elevation-0;
   background: transparent;
-  color: $color-text-default;
+  color: $color;
 
   &:hover,
   &.doc-state-hover {
@@ -111,32 +111,14 @@
 
   &.disabled,
   &.doc-state-disabled {
-    color: lighten($color-text-default, 20%);
+    color: lighten($color, 20%);
   }
+
 }
 
-.button.secret.emphasis {
-  box-shadow: $elevation-0;
-  background: transparent;
-  color: $color-blue;
 
-  &:hover,
-  &.doc-state-hover {
-    box-shadow: $elevation-2;
-  }
-
-  &:active,
-  &.doc-state-active {
-    box-shadow: $elevation-1;
-  }
-
-  &:focus,
-  &.doc-state-focus {
-    box-shadow: $elevation-1;
-  }
-
-  &.disabled,
-  &.doc-state-disabled {
-    color: lighten($color-blue, 20%);
-  }
-}
+.button { @include button(); }
+.button.emphasis { @include button-color(); }
+.button.flat { @include button-flat(); }
+.button.secret { @include button-secret(); }
+.button.secret.emphasis { @include button-secret($color-blue); }
