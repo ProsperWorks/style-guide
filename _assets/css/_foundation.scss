@@ -1,21 +1,40 @@
 // Colors
+$color-default:           #999999;
+$color-blue:              #2196F3;
 
-$color-default:     #999999;
-$color-blue: #2196F3;
+$color-button-default:    #EEEEEE;
+$color-button-emphasis:   #03A9F4;
 
-$color-button-default: #EEEEEE;
-$color-button-emphasis: #03A9F4;
+$color-text-default:      #616161;
+$color-text-white:        #FAFAFA;
 
-$color-text-default: #616161;
-$color-text-white: #FAFAFA;
+// Typography
+$font-xsmall:     0.625rem/0.875rem   'Roboto', sans-serif;
+$font-small:      0.75rem/1.125rem    'Roboto', sans-serif;
+$font-regular:    0.875rem/1.5rem     'Roboto', sans-serif;
+$font-large:      1rem/1.5rem         'Roboto', sans-serif;
+$font-xlarge:     1.25rem/1.5rem      'Roboto', sans-serif;
+$font-xxlarge:    1.5rem/1.875rem     'Roboto', sans-serif;
+$font-xxxlarge:   2rem/2.5rem         'Roboto', sans-serif;
+
+
 // Style
-
 $radius: 2px;
 
 // Elevation
-$elevation-0: none;
-$elevation-1: 0px 1px 3px 0px rgba(0,0,0,0.25), 0px 0px 3px 0px rgba(0,0,0,0.1);
-$elevation-2: 0px 2px 4px 0px rgba(0,0,0,0.25), 0px 0px 4px 0px rgba(0,0,0,0.1);
-$elevation-4: 0px 4px 8px 0px rgba(0,0,0,0.25), 0px 0px 8px 0px rgba(0,0,0,0.1);
-$elevation-8: 0px 8px 16px 0px rgba(0,0,0,0.25), 0px 0px 16px 0px rgba(0,0,0,0.1);
-$elevation-16: 0px 16px 32px 0px rgba(0,0,0,0.25), 0px 0px 32px 0px rgba(0,0,0,0.1);
+$elevation-0:   none;
+$elevation-1:   0px 1px 3px 0px rgba(0,0,0,0.25),   0px 0px 3px 0px rgba(0,0,0,0.1);
+$elevation-2:   0px 2px 4px 0px rgba(0,0,0,0.25),   0px 0px 4px 0px rgba(0,0,0,0.1);
+$elevation-4:   0px 4px 8px 0px rgba(0,0,0,0.25),   0px 0px 8px 0px rgba(0,0,0,0.1);
+$elevation-8:   0px 8px 16px 0px rgba(0,0,0,0.25),  0px 0px 16px 0px rgba(0,0,0,0.1);
+$elevation-16:  0px 16px 32px 0px rgba(0,0,0,0.25), 0px 0px 32px 0px rgba(0,0,0,0.1);
+
+// Animation
+$transition-duration-fast: 250ms;
+$transition-duration-medium: 325ms;
+$transition-duration-slow: 400ms;
+
+$transition-timing-function-standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+$transition-timing-function-deceleration: cubic-bezier(0.0, 0.0, 0.2, 1);
+$transition-timing-function-acceleration: cubic-bezier(0.4, 0.0, 1, 1);
+$transition-timing-function-sharp: cubic-bezier(0.4, 0.0, 0.6, 1);

@@ -5,16 +5,17 @@
   box-shadow: $elevation-1;
   height: 2rem;
   padding: 0 1rem;
-  font: 500 14px/20px 'Roboto', sans-serif; // note: add to foundation
+  font: $font-regular;
+  font-weight: 500;
   text-transform: uppercase;
-  transition: background-color 300ms, color 300ms, box-shadow 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);;
+  transition: background-color $transition-duration-fast, color $transition-duration-fast, box-shadow $transition-duration-medium;
+  transition-timing-function: $transition-timing-function-standard;
 
   &:hover,
   &.doc-state-hover {
     background: lighten($color-button-default, 5%);
     box-shadow: $elevation-4;
-    transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);;
+    transition-timing-function: $transition-timing-function-standard;
   }
 
   &:active,
